@@ -1,0 +1,70 @@
+* {
+    /* m0+p0+bx+ff */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 微軟正黑體;
+}
+
+/* 橫幅 */
+#banner {
+    width: 100%;
+    /* vh 為螢幕高度  */
+    height: 100vh;
+    background-image: url(./img/banner.jpg);
+    /* 背景-尺寸：填滿(cover) - 50% 、500px */
+    background-size: cover;
+    color: white;
+    /* 背景附著效果：固定 */
+    background-attachment: fixed;
+}
+
+#banner nav {
+    padding: 30px;
+    
+}
+
+/* 連結 */
+#banner a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 0 30px;
+    transition: 0.3s;
+}
+
+/* 連結：滑入 */
+#banner a:hover {
+    color: #aaa;
+}
+
+#banner p {
+    /*text-alig 為文字、行內 專用 */
+    text-align: center;
+    margin-top: 300px;
+    /* 透明度：值 - 0 ~ 1  */
+    opacity: 0.7;
+    font-size: 20px;
+    padding: 30px;
+}
+
+#banner hr {
+    width: 300px;
+    opacity: 0.7;
+    margin: 0 auto;
+    
+}
+
+#banner h1 {
+    text-align: center;
+    font-size: 72px;
+    padding: 30px;
+}
+
+
+/* 最新消息 */
+#new {
+    height: 500px;
+    background: #cccccc;
+
+}
