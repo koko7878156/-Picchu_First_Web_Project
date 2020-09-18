@@ -24,6 +24,10 @@
     
 }
 
+body {
+    background: #dfdfdf;
+}
+
 /* 連結 */
 #banner a {
     color: white;
@@ -63,8 +67,56 @@
 
 
 /* 最新消息 */
-#new {
-    height: 500px;
-    background: #cccccc;
+#news {
+    width: 1200px;
+    margin: 0 auto;
+    height: 100vh;
+    /* 格線 */
+    display: grid;
+    /* 橫向分隔 */
+    grid-template-columns:1fr 1fr ;
+    /* 格線間隙 */
+    grid-gap: 50px;
+    padding: 150px 0;
+    text-align: center;
 
 }
+
+#news > div {
+    background: white;
+}
+
+#news h3 {
+    color: #333333;
+}
+
+#news p {
+    padding: 30px;
+    text-align-last: left;
+    /* 行高 */
+    line-height: 1.5;
+}
+
+#news #news-left {
+    height: 300px;
+    background-image: url(./img/left.jpg);
+}
+
+#news #news-right {
+    height: 300px;
+    background-image: url(./img/right.jpg);
+}
+
+a.button {
+    text-decoration: none;
+    color: #aaa;
+    border: 1px solid #aaa;
+    padding: 10px 50px;
+    transition: 0.5s;
+    
+}
+
+a.button:hover {
+    color: white;
+    background: #aaa;
+    }
