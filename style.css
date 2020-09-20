@@ -18,19 +18,20 @@
     /* 背景附著效果：固定 */
     background-attachment: fixed;
 }
-
-#banner nav {
+/* 首頁、關於我 導覽列 */
+#banner nav, #banner-about nav, #banner-contact {
     padding: 30px;
+
     
 }
 
 body {
     background: #dfdfdf;
-    height: 4000px;
+    height: 100vh;
 }
 
 /* 連結 */
-#banner a {
+#banner a, #banner-about a, #banner-contact a {
     color: white;
     text-decoration: none;
     font-size: 24px;
@@ -39,7 +40,7 @@ body {
 }
 
 /* 連結：滑入 */
-#banner a:hover {
+#banner a:hover, #banner-about a, #banner-contact a:hover {
     color: #aaa;
 }
 
@@ -109,20 +110,18 @@ body {
     background-image: url(./img/right.jpg);
 }
 
-a.button {
+a.button, input[type=reset], input[type=submit] {
     text-decoration: none;
     color: #aaa;
     border: 1px solid #aaa;
-    padding: 10px 50px;
-    /* 滑入秒數 */
+    padding: 15px 80px;
     transition: 0.5s;
-    
 }
-/* 滑入效果  */
-a.button:hover {
+
+a.button:hover, input[type=reset]:hover, input[type=submit]:hover {
     color: white;
     background: #aaa;
-    }
+}
 
 
     /* 盒子區塊 */
@@ -202,6 +201,7 @@ footer {
     color:white;
 }
 
+
 footer #icon a {
     padding: 20px;
     /* 濾鏡 */
@@ -224,4 +224,147 @@ footer p {
     padding: 10px;
     font-size: 10px;
     color: #AAA;
+}
+
+footer h2 a {
+    text-decoration: none;
+    color: white ;
+    transition: 0.5s;
+}
+
+footer h2 a:hover {
+    text-decoration: none;
+    color: rgb(173, 238, 211);
+}
+
+/* 關於我分頁 */
+
+#banner-about {
+    width: 100%;
+    /* vh 為螢幕高度  */
+    height: 40vh;
+    background-image: url(./img/about.jpg);
+    /* 背景-尺寸：填滿(cover) - 50% 、500px */
+    background-size: cover;
+    color: white;
+    /* 背景附著效果：固定 */
+    background-attachment: fixed;
+}
+
+#banner-about nav {
+    backdrop-filter: opacity(30%);
+}
+
+#banner-about h2, #banner-contact h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 100;
+    letter-spacing: 30px;
+    padding-top: 30px;
+    padding-left: 20px;
+    line-height: 20vh;
+    backdrop-filter: opacity(30%);
+    height: 50vh;
+    font-size: 72px;
+   
+}
+
+#about-content {
+    width: 1200px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    margin-top: 100px;
+}
+
+#about-content h3 {
+    text-align: center;
+    padding: 20px;
+    color: #ddd;
+    letter-spacing: 10px;
+    padding-left: 10px;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+#about-content hr {
+    width: 600px;
+    margin: 0 auto;
+
+}
+
+#about-content h1 {
+    text-align: center;
+    padding: 40px;
+}
+
+#about-content #about-1 {
+    height: 400px;
+    background-image: url(./img/about-1.jpg);
+    background-size: cover;
+}
+
+#about-content #about-2 {
+    height: 400px;
+    background-image: url(./img/about-2.jpg);
+    background-size: cover;
+
+}
+
+#about-content #about-3 {
+    height: 400px;
+    background-image: url(./img/about-3.jpg);
+    background-size: cover;
+
+}
+
+#about-content p {
+    padding: 30px 0;
+    line-height: 1.5;
+    color: #888;
+
+}
+
+/* 聯絡我 */
+#banner-contact {
+    width: 100%;
+    /* vh 為螢幕高度  */
+    height: 40vh;
+    background-image: url(./img/stanislav-kondratiev-3YsctnmJ2m8-unsplash.jpg);
+    /* 背景-尺寸：填滿(cover) - 50% 、500px */
+    background-size: cover;
+    color: white;
+    /* 背景附著效果：固定 */
+    background-attachment: fixed;
+}
+
+/* 表單 */
+#form-self {
+    width: 1200px;
+    padding: 50px 80px;
+    background: #f6f6f6;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    margin: 100px auto 150px;
+}
+
+#form-self #name, #form-self #email, #form-self #message {
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    margin: 15px 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#form-self ::placeholder {
+    color: #ddd;
+}
+
+#form-self #buttons {
+    text-align: center;
+}
+
+#form-self #buttons input {
+    margin: 20px 30px;
+    cursor: pointer;
+    font-size: 16px;
 }
